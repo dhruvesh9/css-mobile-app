@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Haptics, ImpactStyle } from '@capacitor/haptics';
+import { Toast } from '@capacitor/toast';
 
 @Component({
   selector: 'app-account-overview',
@@ -15,15 +16,27 @@ export class AccountOverviewPage implements OnInit {
 
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+   }
 
   async doTopUp() {
+    this.showToastMessages('Topup Successful')
     Haptics.impact({ style: ImpactStyle.Medium });
     await Haptics.vibrate();
   }
 
   async doAddOns() {
+    this.showToastMessages('Requested Addons')
     Haptics.impact({ style: ImpactStyle.Light });
     await Haptics.vibrate();
   }
+
+  async showToastMessages(message: string){
+    await Toast.show({
+      text: message
+    });
+  }
+
+  
 }

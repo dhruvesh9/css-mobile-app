@@ -1,0 +1,17 @@
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.service-item {
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}

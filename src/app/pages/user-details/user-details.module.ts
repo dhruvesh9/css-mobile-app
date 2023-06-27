@@ -6,6 +6,8 @@ import { UserDetailsPage } from './user-details.page';
 import { ExploreContainerComponentModule } from '../../components/explore-container/explore-container.module';
 
 import { UserDetailsPageRoutingModule } from './user-details-routing.module';
+import { PanelModule } from 'primeng/panel';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   imports: [
@@ -13,6 +15,8 @@ import { UserDetailsPageRoutingModule } from './user-details-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
+    PanelModule,
+    ButtonModule,
     UserDetailsPageRoutingModule
   ],
   declarations: [UserDetailsPage]

@@ -14,5 +14,28 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="User Details"></app-explore-container>
+  <h3>Test android features</h3>
+  <div class="services-grid">
+    <div class="service-item">
+      <p-panel header="Status Bar">
+        <div class="button-container">
+          <button pButton type="button" label="Show Status Bar" class="button-gap" (click)="showStatusBar()"></button>
+          <button pButton type="button" label="Hide Status Bar" class="button-gap" (click)="hideStatusBar()"></button>
+        </div>
+      </p-panel>
+    </div>
+  </div>
+  <br>
+  <div class="services-grid">
+    <div class="service-item">
+      <p-panel header="Send Toast">
+        <div class="button-container">
+          <input type="text" [(ngModel)]="toastMessage" placeholder="Enter toast message"
+            style="color: #000; background-color: #fff;" />
+          <button pButton type="button" label="Send toast" class="button-gap" (click)="showToastMessages()"></button>
+        </div>
+      </p-panel>
+    </div>
+  </div>
+
 </ion-content>
