@@ -44,11 +44,24 @@
         <div class="button-container">
           <button pButton type="button" label="Get Geolocation" class="button-gap" (click)="printCurrentPosition()"></button>
           <span *ngIf="currentCoordinates !== null && currentCoordinates !== undefined">
-            Your Current Coordinates are: {{ currentCoordinates!.coords.latitude }}, {{ currentCoordinates!.coords.longitude }}
+            Coordinates : {{ currentCoordinates!.coords.latitude }}, {{ currentCoordinates!.coords.longitude }}
           </span>
         </div>
       </p-panel>
     </div>
   </div>
+  <br>
+  <div class="services-grid">
+    <div class="service-item">
+      <p-panel header="Haptic Feedback">
+        <div class="button-container">
+          <button pButton type="button" label="Impact : Light" class="button-gap" (click)="performHaptic('light')"></button>
+          <button pButton type="button" label="Impact : Medium" class="button-gap" (click)="performHaptic('medium')"></button>
+          <button pButton type="button" label="Impact : Heavy" class="button-gap" (click)="performHaptic('heavy')"></button>
+        </div>
+      </p-panel>
+    </div>
+  </div>
+
 
 </ion-content>

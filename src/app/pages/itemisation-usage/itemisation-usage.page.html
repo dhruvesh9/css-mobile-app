@@ -14,37 +14,37 @@
     </ion-toolbar>
   </ion-header>
 
-<div class="itemization-table">
-  <div class="filter-panel">
-    <label for="filter">Filter:</label>
-    <input type="text" [(ngModel)]="filterText" placeholder="Enter search text"
-      style="color: #000; background-color: #fff;" />
+  <div class="itemization-table">
+    <div class="filter-panel">
+      <label for="filter">Filter:</label>
+      <input type="text" [(ngModel)]="filterText" placeholder="Enter search text"
+        style="color: #000; background-color: #fff;" />
 
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Service Number</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Duration</th>
+          <th>Remaining Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of getPaginatedData()">
+          <td>{{ item.serviceNumber }}</td>
+          <td>{{ item.startTime }}</td>
+          <td>{{ item.endTime }}</td>
+          <td>{{ item.duration }}</td>
+          <td>{{ item.remainingBalance }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p-paginator [totalRecords]="getFilteredData().length" [rows]="itemsPerPage" (onPageChange)="onPageChange($event)"
+      [rowsPerPageOptions]="[5, 10, 15]"></p-paginator>
   </div>
-
-  <table class="data-table">
-    <thead>
-      <tr>
-        <th>Service Number</th>
-        <th>Start Time</th>
-        <th>End Time</th>
-        <th>Duration</th>
-        <th>Remaining Balance</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of getPaginatedData()">
-        <td>{{ item.serviceNumber }}</td>
-        <td>{{ item.startTime }}</td>
-        <td>{{ item.endTime }}</td>
-        <td>{{ item.duration }}</td>
-        <td>{{ item.remainingBalance }}</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p-paginator [totalRecords]="getFilteredData().length" [rows]="itemsPerPage" (onPageChange)="onPageChange($event)"
-    [rowsPerPageOptions]="[5, 10, 15]"></p-paginator>
-</div>
 
 </ion-content>

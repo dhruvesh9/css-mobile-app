@@ -22,13 +22,11 @@ export class AccountOverviewPage implements OnInit {
 
   async doTopUp() {
     this.showToastMessages('Topup Successful')
-    Haptics.impact({ style: ImpactStyle.Medium });
     await Haptics.vibrate();
   }
 
   async doAddOns() {
     this.showToastMessages('Requested Addons')
-    Haptics.impact({ style: ImpactStyle.Light });
     await Haptics.vibrate();
   }
 

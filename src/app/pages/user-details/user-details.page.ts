@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { StatusBar } from '@capacitor/status-bar';
 import { Toast } from '@capacitor/toast';
 import { Geolocation, Position } from '@capacitor/geolocation';
+import { Haptics, ImpactStyle, NotificationType } from '@capacitor/haptics';
 
 @Component({
   selector: 'app-user-details',
@@ -32,6 +33,15 @@ export class UserDetailsPage {
   async printCurrentPosition() {
     this.currentCoordinates = await Geolocation.getCurrentPosition();
     console.log('Current position:', this.currentCoordinates);
-  };
+  }
 
+  async performHaptic(impact:string){
+    if(impact === 'light'){
+      await Haptics.impact({ style: ImpactStyle.Light });
+    }else if(impact === 'medium'){
+      await Haptics.impact({ style: ImpactStyle.Medium });
+    }else if(impact === 'heavy'){
+      await Haptics.impact({ style: ImpactStyle.Heavy });
+    }
+  }
 }

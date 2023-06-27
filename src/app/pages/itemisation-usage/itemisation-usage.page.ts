@@ -28,7 +28,7 @@ export class ItemisationUsagePage implements OnInit {
     { serviceNumber: '67890', startTime: '4:00 AM', endTime: '4:45 AM', duration: '45 minutes', remainingBalance: '$18' },
     { serviceNumber: '09876', startTime: '5:00 AM', endTime: '5:30 AM', duration: '30 minutes', remainingBalance: '$16' }
   ];
-  
+
 
   filterText: string = '';
   currentPage: number = 1;
@@ -57,11 +57,11 @@ export class ItemisationUsagePage implements OnInit {
   }
 
   onPageChange(event: any): void {
-    this.currentPage = event.page;
+    this.currentPage = event.page + 1;
   }
 
   ngOnInit(): void {
-    
+
   }
 }
 
