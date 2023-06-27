@@ -1,0 +1,93 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <!-- Account Overview -->
+      <img src="assets/cerillionlogo.png" alt="Cerillion Logo">
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Account Overview</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <div class="account-overview">
+    <h2>Welcome, Dhruvesh!</h2>
+
+    <h3>Account Overview</h3>
+    <div class="container-first">
+      <div class="additional-info">
+        <div class="info-item">
+          <p-card>
+            <i class="pi pi-user"></i>
+            <p>Dhruvesh</p>
+            <p>Account Number: 123456789</p>
+          </p-card>
+        </div>
+        <div class="info-item" [ngClass]="{ 'paid': isBillPaid, 'unpaid': !isBillPaid }">
+          <p-card>
+            <i class="pi pi-dollar"></i>
+            <p>Monthly bill</p>
+            <p *ngIf="isBillPaid; else unpaidBill">Bill Status: Paid</p>
+            <ng-template #unpaidBill>
+              <p>Bill Status: Unpaid</p>
+            </ng-template>
+          </p-card>
+        </div>
+        <div class="info-item">
+          <p-card>
+            <i class="pi pi-credit-card"></i>
+            <p>Credit Card Info</p>
+            <p>Card details: ****1234 12/25</p>
+          </p-card>
+        </div>
+      </div>
+    </div>
+
+    <h3>Services</h3>
+    <div class="services-grid">
+      <div class="service-item">
+        <p-panel header="Mobile Phone">
+          <i class="pi pi-mobile"></i>
+          <p>Balance: $50</p>
+          <p>Data Usage: 10 GB</p>
+          <p>Service Usage: 500 mins</p>
+          <div class="button-container">
+            <button pButton type="button" label="Top Up" class="button-gap" (click)="doTopUp()"></button>
+            <button pButton type="button" label="Add-ons" class="button-gap" (click)="doAddOns()"></button>
+          </div>
+        </p-panel>
+      </div>
+      <div class="service-item">
+        <p-panel header="DTH">
+          <i class="pi pi-desktop"></i>
+          <p>Channels: 150</p>
+          <p>Balance: $30</p>
+          <p>Service Usage: 300 mins</p>
+          <div class="button-container">
+            <button pButton type="button" label="Top Up" class="button-gap" (click)="doTopUp()"></button>
+            <button pButton type="button" label="Add-ons" class="button-gap" (click)="doAddOns()"></button>
+          </div>
+        </p-panel>
+      </div>
+      <div class="service-item">
+        <p-panel header="Broadband">
+          <i class="pi pi-globe"></i>
+          <p>Balance: $80</p>
+          <p>Data Usage: 50 GB</p>
+          <p>Service Usage: Unlimited</p>
+          <div class="button-container">
+            <button pButton type="button" label="Top Up" class="button-gap" (click)="doTopUp()"></button>
+            <button pButton type="button" label="Add-ons" class="button-gap" (click)="doAddOns()"></button>
+          </div>
+        </p-panel>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

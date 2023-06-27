@@ -1,0 +1,49 @@
+.account-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-first {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.additional-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    //   flex: 1 0 300px;
+    max-width: 300px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.service-item {
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.paid {
+    background-color: green;
+}
+
+.unpaid {
+    background-color: red;
+}

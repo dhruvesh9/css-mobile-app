@@ -4,31 +4,31 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: 'selfcare',
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        path: 'account-overview',
+        loadChildren: () => import('../pages/account-overview/account-overview.module').then(m => m.AccountOverviewModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'itemisation-usage',
+        loadChildren: () => import('../pages/itemisation-usage/itemisation-usage.module').then(m => m.ItemisationUsagePageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'user-details',
+        loadChildren: () => import('../pages/user-details/user-details.module').then(m => m.UserDetailsPageModule)
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/selfcare/account-overview',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/selfcare/account-overview',
     pathMatch: 'full'
   }
 ];
