@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { StatusBar } from '@capacitor/status-bar';
 import { Toast } from '@capacitor/toast';
+import { Geolocation, Position } from '@capacitor/geolocation';
+
 @Component({
   selector: 'app-user-details',
   templateUrl: 'user-details.page.html',
@@ -8,7 +10,8 @@ import { Toast } from '@capacitor/toast';
 })
 export class UserDetailsPage {
 
-  toastMessage : string = "";
+  toastMessage: string = "";
+  currentCoordinates: Position | null = null;
 
   constructor() { }
 
@@ -20,10 +23,15 @@ export class UserDetailsPage {
     await StatusBar.hide();
   };
 
-  async showToastMessages(){
+  async showToastMessages() {
     await Toast.show({
       text: this.toastMessage
     });
   }
+
+  async printCurrentPosition() {
+    this.currentCoordinates = await Geolocation.getCurrentPosition();
+    console.log('Current position:', this.currentCoordinates);
+  };
 
 }

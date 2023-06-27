@@ -37,5 +37,18 @@
       </p-panel>
     </div>
   </div>
+  <br>
+  <div class="services-grid">
+    <div class="service-item">
+      <p-panel header="Get Geolocation">
+        <div class="button-container">
+          <button pButton type="button" label="Get Geolocation" class="button-gap" (click)="printCurrentPosition()"></button>
+          <span *ngIf="currentCoordinates !== null && currentCoordinates !== undefined">
+            Your Current Coordinates are: {{ currentCoordinates!.coords.latitude }}, {{ currentCoordinates!.coords.longitude }}
+          </span>
+        </div>
+      </p-panel>
+    </div>
+  </div>
 
 </ion-content>
