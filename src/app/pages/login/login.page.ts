@@ -68,10 +68,10 @@ export class LoginPage implements OnInit {
     async verifyBiometricIdentity(): Promise<boolean> {
         try {
             const result = await NativeBiometric.verifyIdentity({
-                reason: 'For easy login',
-                title: 'Login',
-                subtitle: 'Maybe add subtitle here?',
-                description: 'Maybe a description too?',
+                reason: 'Secure and Convenient Login',
+                title: 'Verify Your Identity',
+                subtitle: 'Enhanced Security and Seamless Access',
+                description: 'Please authenticate your identity to securely log in and enjoy a seamless experience.',
             });
 
             return true;

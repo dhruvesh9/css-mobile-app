@@ -70,7 +70,9 @@ export class ItemisationUsagePage implements OnInit {
   ];
 
   barChartData: any;
+  barChartOptions: any;
   pieChartData: any;
+  pieChartOptions: any;
 
   filterText: string = '';
   currentPage: number = 1;
@@ -78,13 +80,24 @@ export class ItemisationUsagePage implements OnInit {
 
   constructor() {
     this.barChartData = {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['January', 'February', 'March', 'April', 'May'],
       datasets: [
         {
-          label: 'Sales',
-          data: [65, 59, 80, 81, 56, 55, 40]
+          label: 'Data 1',
+          data: [12, 19, 3, 5, 2]
         }
       ]
+    };
+
+    this.barChartOptions = {
+      responsive: true,
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
     };
 
     this.pieChartData = {
@@ -96,6 +109,10 @@ export class ItemisationUsagePage implements OnInit {
           hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
         }
       ]
+    };
+
+    this.pieChartOptions = {
+      responsive: true
     };
   }
 

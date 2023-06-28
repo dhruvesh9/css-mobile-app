@@ -49,10 +49,17 @@
 
   <br>
   <br>
-  <h2>Bar Chart</h2>
-  <p-chart type="bar" [data]="barChartData"></p-chart>
+  <div class="container">
+    <div class="chart-container">
+      <h2>Sales</h2>
+      <p-chart type="bar" [data]="barChartData" [options]="barChartOptions"></p-chart>
+    </div>
+    <div class="chart-container">
+      <h2>Product Categories</h2>
+      <p-chart type="pie" [data]="pieChartData" [options]="pieChartOptions"></p-chart>
+    </div>
+  </div>
+  
 
-  <h2>Pie Chart</h2>
-  <p-chart type="pie" [data]="pieChartData"></p-chart>
 
 </ion-content>

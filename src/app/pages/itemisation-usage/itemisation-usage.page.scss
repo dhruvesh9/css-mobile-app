@@ -46,3 +46,21 @@
     }
   }
   
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .chart-container {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  
+  .bar-chart {
+    height: 300px;
+  }
+  
+  .pie-chart {
+    height: 400px;
+  }
+  
