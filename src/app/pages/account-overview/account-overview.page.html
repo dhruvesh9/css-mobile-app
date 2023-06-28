@@ -4,16 +4,25 @@
       <!-- Account Overview -->
       <img src="assets/cerillionlogo.png" alt="Cerillion Logo">
     </ion-title>
+    <ion-buttons slot="end" class="searchbar-container">
+      <ion-searchbar class="custom-searchbar" placeholder="Search for accounts, services and more" placeholder-style="inside"></ion-searchbar>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div class="navbar">
+    <div class="menu-item">Account Settings</div>
+    <div class="menu-item">Manage Payee</div>
+    <div class="menu-item">Service Settings</div>
+  </div>
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Account Overview</ion-title>
     </ion-toolbar>
   </ion-header>
 
+  <hr style="background-color: rgba(0, 144, 192, 1); height: 2px;">
 
 
   <div class="account-overview">

@@ -8,8 +8,12 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
+        path: 'login',
+        loadChildren: () => import('../pages/login/login.module').then(m => m.LoginPageModule)
+      },
+      {
         path: 'account-overview',
-        loadChildren: () => import('../pages/account-overview/account-overview.module').then(m => m.AccountOverviewModule)
+        loadChildren: () => import('../pages/account-overview/account-overview.module').then(m => m.AccountOverviewPageModule)
       },
       {
         path: 'itemisation-usage',
@@ -21,14 +25,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/selfcare/account-overview',
+        redirectTo: '/selfcare/login',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/selfcare/account-overview',
+    redirectTo: '/selfcare/login',
     pathMatch: 'full'
   }
 ];

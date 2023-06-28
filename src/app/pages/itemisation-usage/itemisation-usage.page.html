@@ -43,7 +43,16 @@
       </tbody>
     </table>
 
-    <p-paginator [totalRecords]="getFilteredData().length" [rows]="itemsPerPage" (onPageChange)="onPageChange($event)"></p-paginator>
+    <p-paginator [totalRecords]="getFilteredData().length" [rows]="itemsPerPage"
+      (onPageChange)="onPageChange($event)"></p-paginator>
   </div>
+
+  <br>
+  <br>
+  <h2>Bar Chart</h2>
+  <p-chart type="bar" [data]="barChartData"></p-chart>
+
+  <h2>Pie Chart</h2>
+  <p-chart type="pie" [data]="pieChartData"></p-chart>
 
 </ion-content>

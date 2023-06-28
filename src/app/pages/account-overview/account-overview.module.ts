@@ -39,4 +39,4 @@ import { SpinnerModule } from 'primeng/spinner';
   ],
   declarations: [AccountOverviewPage]
 })
-export class AccountOverviewModule {}
+export class AccountOverviewPageModule {}

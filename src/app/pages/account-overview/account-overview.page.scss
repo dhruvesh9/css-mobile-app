@@ -47,3 +47,32 @@
 .unpaid {
     background-color: red;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: last baseline;
+    padding: 10px;
+}
+
+.menu-item {
+    padding: 10px;
+    margin: 0 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: rgba(0, 144, 192, 1);
+}
+
+.searchbar-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  
+  .custom-searchbar {
+    width: 120%; /* Adjust the width as needed */
+    max-width: 1000px; /* Set a maximum width if desired */
+  }

@@ -69,12 +69,35 @@ export class ItemisationUsagePage implements OnInit {
     { serviceNumber: '09876', startTime: '5:00 AM', endTime: '5:30 AM', duration: '30 minutes', remainingBalance: '$16' }
   ];
 
+  barChartData: any;
+  pieChartData: any;
 
   filterText: string = '';
   currentPage: number = 1;
   itemsPerPage: number = 5;
 
-  constructor() { }
+  constructor() {
+    this.barChartData = {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      datasets: [
+        {
+          label: 'Sales',
+          data: [65, 59, 80, 81, 56, 55, 40]
+        }
+      ]
+    };
+
+    this.pieChartData = {
+      labels: ['Red', 'Blue', 'Yellow'],
+      datasets: [
+        {
+          data: [300, 50, 100],
+          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+          hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+        }
+      ]
+    };
+  }
 
   getFilteredData(): any[] {
     if (this.filterText) {
