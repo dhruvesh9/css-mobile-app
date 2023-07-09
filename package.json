@@ -29,7 +29,6 @@
     "@capacitor/keyboard": "5.0.4",
     "@capacitor/status-bar": "5.0.4",
     "@capacitor/toast": "^5.0.4",
-    "@ionic-enterprise/identity-vault": "^5.11.1",
     "@ionic/angular": "^7.0.0",
     "capacitor-native-biometric": "^4.2.2",
     "chart.js": "^4.3.0",
